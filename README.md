@@ -12,3 +12,7 @@ Usage: `python texter.py <target-filename>.txt`
 ## A03
 Added work related to task A03 in directory `A03`.
 Python script `pubchem_parser.py` takes a search result from PubChem (in XML format) and prints IUPAC names of all compounds in the file to stdout. 
+
+## A04
+Related files in directory `A04`.
+Main script create database from provided csv files and reports the number of Albanian cities in the database.
