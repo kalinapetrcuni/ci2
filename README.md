@@ -16,3 +16,8 @@ Python script `pubchem_parser.py` takes a search result from PubChem (in XML for
 ## A04
 Related files in directory `A04`.
 Main script create database from provided csv files and reports the number of Albanian cities in the database.
+
+## A05
+Related files in directory `A05`.
+The main script `cdxml2sdf.py` takes input cdxml files and an optional sdf output file specification from commandline arguments.
+It compiles all the molecules from input cdxml files into one output sdf and finds the most similar molecules according to Tanimoto reporting the cdxml files they originated from and their similarity value to stdout.
