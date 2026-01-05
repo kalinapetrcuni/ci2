@@ -25,3 +25,8 @@ It compiles all the molecules from input cdxml files into one output sdf and fin
 ## A06
 Related files in directory `A06`.
 The main script `graph.py` loads data from `graph.csv`, plots it and saves the plot into `graph.png`.
+
+## A07
+Related files in directory `A07`.
+Contains a workflow to convert the SMILES code of a molecule to a POV-Ray rendered image of the molecule's 3D structure. 
+An example scene of five molecules of alanine located at the vertices of a regular pentagon is included.
