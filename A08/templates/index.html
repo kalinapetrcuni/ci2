@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CHEMBL SMILES Search</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 2rem;
+            max-width: 800px;
+        }
+        h1 {
+            margin-bottom: 1rem;
+        }
+        form {
+            margin-bottom: 2rem;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 0.5rem;
+            font-size: 1rem;
+        }
+        button {
+            margin-top: 0.5rem;
+            padding: 0.5rem 1rem;
+            font-size: 1rem;
+        }
+        .error {
+            color: #b00020;
+            margin-bottom: 1rem;
+            font-weight: bold;
+        }
+        .result {
+            border-top: 1px solid #ccc;
+            padding-top: 1rem;
+        }
+        table {
+            border-collapse: collapse;
+        }
+        td {
+            padding: 0.3rem 0.8rem 0.3rem 0;
+            vertical-align: top;
+        }
+        td.label {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<h1>CHEMBL Compound Search</h1>
+<h2>by Petr Kalina</h2>
+<form method="post" action="/">
+    <label for="smiles">Enter SMILES:</label><br>
+    <input
+        type="text"
+        id="smiles"
+        name="smiles"
+        value="{{ smiles_input }}"
+        placeholder="e.g. CN1C=NC2=C1C(=O)N(C(=O)N2C)C"
+        required
+    >
+    <br>
+    <button type="submit">Search</button>
+</form>
+
+{% if error_message %}
+    <div class="error">
+        {{ error_message }}
+    </div>
+{% endif %}
+
+{% if compound %}
+    <div class="result">
+        <h2>Compound Information</h2>
+        <table>
+            <tr>
+                <td class="label">CHEMBL ID:</td>
+                <td>{{ compound.chembl_id }}</td>
+            </tr>
+            <tr>
+                <td class="label">Preferred Name:</td>
+                <td>{{ compound.preferred_name or "—" }}</td>
+            </tr>
+            <tr>
+                <td class="label">Molecular Formula:</td>
+                <td>{{ compound.molecular_formula or "—" }}</td>
+            </tr>
+            <tr>
+                <td class="label">Molecular Weight:</td>
+                <td>{{ compound.molecular_weight or "—" }}</td>
+            </tr>
+            <tr>
+                <td class="label">Canonical SMILES:</td>
+                <td>{{ compound.canonical_smiles or "—" }}</td>
+            </tr>
+            <tr>
+                <td class="label">InChI:</td>
+                <td>{{ compound.inchi or "—" }}</td>
+            </tr>
+            <tr>
+                <td class="label">InChI Key:</td>
+                <td>{{ compound.inchi_key or "—" }}</td>
+            </tr>
+            <tr>
+                <td class="label">Molecule Type:</td>
+                <td>{{ compound.molecule_type or "—" }}</td>
+            </tr>
+        </table>
+    </div>
+{% endif %}
+
+</body>
+</html>
