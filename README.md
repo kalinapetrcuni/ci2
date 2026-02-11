@@ -30,3 +30,7 @@ The main script `graph.py` loads data from `graph.csv`, plots it and saves the p
 Related files in directory `A07`.
 Contains a workflow to convert the SMILES code of a molecule to a POV-Ray rendered image of the molecule's 3D structure. 
 An example scene of five molecules of alanine located at the vertices of a regular pentagon is included.
+
+## A08
+Related files in directory `A08`.
+A Python Flask web application to query information about molecules from the Chembl database by SMILES. 
