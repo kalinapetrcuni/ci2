@@ -1,6 +1,6 @@
 # A08
 This directory contains work related to assignment A08.
-It houses a web application using Python Flask to search molecules by SMILES in the Chembl database.
+It houses a web application built on Python Flask to search molecules by SMILES in the Chembl database.
 
 The application as is is intended for development and local use only.
 
@@ -18,19 +18,20 @@ python3 -m venv .venv
 # activate the enviroment
 source .venv/bin/activate
 
-# install dependencies
-pip install -r requirements.txt
-
 # navigate into the A08 directory
 cd ci2/A08
+
+# install dependencies
+pip install -r requirements.txt
 
 # run the web app
 python3 app.py
 
 ```
+To access the running web application visit the following URL: `http://localhost:5000`
 
-To query Chembl for your molecule enter its canonical SMILES string into the form titled `Enter SMILES:` and press the `Search` button (or ENTER on your keyboard).
-The output (and/or possible error messages) will be displayed below the search form.
+To query Chembl for your molecule enter its canonical SMILES string into the form titled `Enter SMILES:` and press the `Search` button (or the ENTER key on your keyboard).
+The search result (and/or possible error messages) will be displayed below the search form.
 
 
 ## Example outputs
